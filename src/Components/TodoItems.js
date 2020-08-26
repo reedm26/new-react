@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, CSSProperties } from "react";
 import propTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import { List, ListItem, ListItemText } from "@material-ui/core";
+
+// import { makeStyles } from "@material-ui/core/styles";
+// import { List, ListItem, ListItemText } from "@material-ui/core";
 
 export class TodoItems extends Component {
   getStyle = () => {
@@ -16,6 +17,16 @@ export class TodoItems extends Component {
 
   render() {
     const { id, title } = this.props.todo;
+    const btnStyle = {
+      background: "#ff0000",
+      color: "#fff",
+      border: "none",
+      padding: "5px 10px",
+      margin: "2px",
+      borderRadius: "50%",
+      cursor: "pointer",
+      float: "right",
+    };
     return (
       <div style={this.getStyle()}>
         <p>
@@ -35,17 +46,7 @@ export class TodoItems extends Component {
 }
 
 TodoItems.propTypes = {
-  todos: propTypes.object.isRequired,
-};
-const btnStyle = {
-  background: "#ff0000",
-  color: "#fff",
-  border: "none",
-  padding: "5px 10px",
-  margin: "2px",
-  borderRadius: "50%",
-  cursor: "pointer",
-  float: "right",
+  todo: propTypes.object.isRequired,
 };
 
 export default TodoItems;

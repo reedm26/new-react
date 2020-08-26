@@ -1,0 +1,16 @@
+{
+  "[handlebars]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[html]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "workbench.colorCustomizations": { "editor.background": "#000000" },
+  "editor.formatOnSave": true
+}
