@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./App.css";
 import Todos from "./Components/Todos";
+import Header from "./Components/layout/Header";
 class App extends Component {
   state = {
     todos: [
@@ -32,10 +33,20 @@ class App extends Component {
       }),
     });
   };
+  delTodo = (id) => {
+    this.setState({
+      todos: [...this.state.todos.filter((todo) => todo.id !== id)],
+    });
+  };
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} markComplete={this.markComplete} />
+        <Header />
+        <Todos
+          todos={this.state.todos}
+          markComplete={this.markComplete}
+          delTodo={this.delTodo}
+        />
       </div>
     );
   }
