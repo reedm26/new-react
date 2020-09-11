@@ -1,8 +1,5 @@
-import React, { Component, CSSProperties } from "react";
+import React, { Component } from "react";
 import propTypes from "prop-types";
-
-// import { makeStyles } from "@material-ui/core/styles";
-// import { List, ListItem, ListItemText } from "@material-ui/core";
 
 export class TodoItems extends Component {
   getStyle = () => {
